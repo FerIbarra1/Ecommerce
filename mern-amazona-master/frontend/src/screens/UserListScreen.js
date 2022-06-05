@@ -71,7 +71,7 @@ export default function UserListScreen() {
   }, [userInfo, successDelete]);
 
   const deleteHandler = async (user) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm('Estas Seguro que Deseas Eliminarlo?')) {
       try {
         dispatch({ type: 'DELETE_REQUEST' });
         await axios.delete(`/api/users/${user._id}`, {
