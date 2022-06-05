@@ -5,7 +5,6 @@ import streamifier from 'streamifier';
 import { isAdmin, isAuth } from '../utils.js';
 
 const upload = multer();
-
 const uploadRouter = express.Router();
 
 uploadRouter.post(
