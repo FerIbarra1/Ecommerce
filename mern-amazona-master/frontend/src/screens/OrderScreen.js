@@ -323,7 +323,7 @@ export default function OrderScreen() {
                     {loadingDeliver && <LoadingBox></LoadingBox>}
                     <div className="d-grid">
                       <Button type="button" onClick={deliverOrderHandler}>
-                        Deliver Order
+                        Entregar Pedido
                       </Button>
                     </div>
                   </ListGroup.Item>
