@@ -220,7 +220,7 @@ export default function OrderScreen() {
               </Card.Text>
               {order.isDelivered ? (
                 <MessageBox variant="success">
-                  Entregado En {order.deliveredAt}
+                  Entregado
                 </MessageBox>
               ) : (
                 <MessageBox variant="danger">No Entregado</MessageBox>
