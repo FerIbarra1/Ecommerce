@@ -176,7 +176,7 @@ export default function OrderScreen() {
         `/api/orders/${order._id}/deliver`,
         {},
         {
-          headers: { authorization: `Bearer ${userInfo.token}` },
+          headers: { authorization: `prueba` },
         }
       );
       dispatch({ type: 'DELIVER_SUCCESS', payload: data });
