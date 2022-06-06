@@ -85,7 +85,14 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>Cafe Deer</Navbar.Brand>
+                <Navbar.Brand><img
+          alt=""
+          src='/images/CAFE DEER.jpg'
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{' '} Cafe Deer</Navbar.Brand>
+                
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -266,7 +273,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">Cafe Deer 2021 - Proyecto Prueba</div>
+          <div className="text-center">Cafe Deer 2022 - Proyecto Prueba</div>
         </footer>
       </div>
     </BrowserRouter>
