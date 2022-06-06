@@ -55,7 +55,7 @@ export default function PaymentMethodScreen() {
               value="Stripe"
               checked={paymentMethodName === 'Stripe'}
               onChange={(e) => setPaymentMethod(e.target.value)}
-            />
+            /> 
           </div> */}
           <div className="mb-3">
             <Button type="submit">Continuar</Button>
