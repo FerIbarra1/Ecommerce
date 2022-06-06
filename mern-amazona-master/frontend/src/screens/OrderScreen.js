@@ -235,7 +235,7 @@ export default function OrderScreen() {
               </Card.Text>
               {order.isPaid ? (
                 <MessageBox variant="success">
-                  Pagado En {order.paidAt}
+                  Pagado
                 </MessageBox>
               ) : (
                 <MessageBox variant="danger">No Pagado</MessageBox>
