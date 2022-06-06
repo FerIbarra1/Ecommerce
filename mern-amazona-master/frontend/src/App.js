@@ -91,7 +91,7 @@ function App() {
           width="30"
           height="30"
           className="d-inline-block align-top"
-        />{' '} Cafe Deer</Navbar.Brand>
+        />{' '} CAFE DEER</Navbar.Brand>
                 
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
