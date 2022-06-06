@@ -58,7 +58,7 @@ export default function PaymentMethodScreen() {
             />
           </div>
           <div className="mb-3">
-            <Button type="submit">Contiunar</Button>
+            <Button type="submit">Continuar</Button>
           </div>
         </Form>
       </div>
