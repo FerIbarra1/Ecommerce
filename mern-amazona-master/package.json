@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/basir/mern-amazona/issues"
   },
-  "homepage": "https://github.com/basir/mern-amazona#readme"
+  "homepage": "https://github.com/basir/mern-amazona#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
