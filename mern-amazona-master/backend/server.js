@@ -18,18 +18,10 @@ mongoose
     console.log(err.message);
   });
   
-  const cors = require("cors")
+  // const cors = require("cors")
   const app = express();
 
-  app.use(
-    cors({
-      origin: "*",
-      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-      preflightContinue: false,
-      optionsSuccessStatus: 204,
-      credentials: true
-    })
-  )
+  // app.use(cors())
 
 
 
