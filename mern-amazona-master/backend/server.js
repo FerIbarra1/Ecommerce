@@ -7,6 +7,7 @@ import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 import uploadRouter from './routes/uploadRoutes.js';
+import cors from 'cors';
 
 dotenv.config();
 mongoose
@@ -17,7 +18,7 @@ mongoose
   .catch((err) => {
     console.log(err.message);
   });
-  
+
   const app = express();
 
   const cors=require("cors");
