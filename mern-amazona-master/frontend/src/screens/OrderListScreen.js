@@ -52,7 +52,7 @@ export default function OrderListScreen() {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(`/api/orders`, {
-          headers: { Authorization: `Bearer ${userInfo.token}` },
+          headers: { },
         });
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
       } catch (err) {
