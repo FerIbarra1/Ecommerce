@@ -7,6 +7,16 @@ import { isAuth, isAdmin, generateToken } from '../utils.js';
 const userRouter = express.Router();
 
 userRouter.get(
+  '/add',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.send(users);
+  })
+);
+
+userRouter.get(
   '/',
   isAuth,
   isAdmin,
