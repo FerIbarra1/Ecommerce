@@ -157,8 +157,8 @@ export default function SearchScreen() {
               ))}
             </ul>
           </div>
-          <div>
-            <h3>Precio</h3>
+          {/* <div> */}
+            {/* <h3>Precio</h3>
             <ul>
               <li>
                 <Link
@@ -180,8 +180,8 @@ export default function SearchScreen() {
               ))}
             </ul>
           </div>
-          <div>
-            <h3>Valoracion</h3>
+          <div> */}
+            {/* <h3>Valoracion</h3>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>
@@ -202,7 +202,7 @@ export default function SearchScreen() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </Col>
         <Col md={9}>
           {loading ? (
