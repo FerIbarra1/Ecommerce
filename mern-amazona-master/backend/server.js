@@ -17,6 +17,8 @@ mongoose
   .catch((err) => {
     console.log(err.message);
   });
+  
+  const app = express();
 
   const cors=require("cors");
   const corsOptions ={
@@ -25,7 +27,6 @@ mongoose
      optionSuccessStatus:200,
   }
 
-const app = express();
 
 app.use(cors(corsOptions))
 
