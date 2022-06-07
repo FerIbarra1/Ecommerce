@@ -8,12 +8,13 @@ import { isAuth, isAdmin, mailgun, payOrderEmailTemplate } from '../utils.js';
 const orderRouter = express.Router();
 
 orderRouter.get(
-  '/produccion',
-  expressAsyncHandler(async (req, res) => {
-    const orders = await Order.find().populate('user', 'name');
-    res.send(orders);
-  })
-);
+  '/produccion', (req, res) => {
+    Order
+    .find()
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error}));
+  });
+
 
 orderRouter.get(
   '/',
