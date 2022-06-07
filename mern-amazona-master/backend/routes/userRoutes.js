@@ -5,7 +5,6 @@ import User from '../models/userModel.js';
 import { isAuth, isAdmin, generateToken } from '../utils.js';
 
 const userRouter = express.Router();
-
 userRouter.get(
   '/add',
   expressAsyncHandler(async (req, res) => {
