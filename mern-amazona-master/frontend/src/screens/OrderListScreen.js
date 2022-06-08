@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { toast } from 'react-toastify';
 import Button from 'react-bootstrap/Button';
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +8,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
+import Database from '../components/Database';
 
 
             
@@ -50,6 +51,17 @@ export default function OrderListScreen() {
       error: '',
     });
 
+
+    const [data2, setData2] = useState([]);
+
+    useEffect(() => {
+      fetch("https://api-produccion.herokuapp.com/api/online")
+      .then((response) => response.json() )
+      .then((json) => setData2(json))
+    }, []);
+
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -89,6 +101,8 @@ export default function OrderListScreen() {
       }
     }
   };
+
+
 
   return (
     <div>
@@ -152,6 +166,8 @@ export default function OrderListScreen() {
           </tbody>
         </table>
       )}
+
+      <Database data2={data2} />
     </div>
   );
 }

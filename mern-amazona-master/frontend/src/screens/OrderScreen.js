@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -15,7 +15,6 @@ import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
 
-useState
 
 
 function reducer(state, action) {
