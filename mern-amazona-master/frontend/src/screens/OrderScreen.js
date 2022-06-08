@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -14,6 +14,9 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+
+useState
+
 
 function reducer(state, action) {
   switch (action.type) {
@@ -196,7 +199,7 @@ export default function OrderScreen() {
       <Helmet>
         <title>Pedido {orderId}</title>
       </Helmet>
-      <h1 className="my-3">Order {orderId}</h1>
+      <h1 className="my-3">Pedido {orderId}</h1>
       <Row>
         <Col md={8}>
           <Card className="mb-3">
@@ -223,7 +226,7 @@ export default function OrderScreen() {
                   Entregado
                 </MessageBox>
               ) : (
-                <MessageBox variant="danger">No Entregado</MessageBox>
+                <MessageBox variant="danger">Pendiente</MessageBox>
               )}
             </Card.Body>
           </Card>
@@ -319,6 +322,8 @@ export default function OrderScreen() {
                   </ListGroup.Item>
                 )}
                 {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+
+
                   <ListGroup.Item>
                     {loadingDeliver && <LoadingBox></LoadingBox>}
                     <div className="d-grid">
