@@ -189,7 +189,6 @@ export default function OrderScreen() {
       dispatch({ type: 'DELIVER_FAIL' });
     }
   }
-
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
