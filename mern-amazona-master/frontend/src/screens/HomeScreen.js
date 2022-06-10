@@ -7,6 +7,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Database2 from '../components/Database2';
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -28,6 +29,13 @@ function HomeScreen() {
     loading: true,
     error: '',
   });
+  const [data3, setData3] = useState([]);
+
+    useEffect(() => {
+      fetch("http://api-promociones.herokuapp.com/CampAutorizadas")
+      .then((response) => response.json() )
+      .then((json) => setData3(json))
+    }, []);
   // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +56,8 @@ function HomeScreen() {
         <title>Cafe Deer</title>
       </Helmet>
       <h1>Productos</h1>
+      <div><Database2 data3={data3} /></div>
+      <div></div>
       <div className="products">
         {loading ? (
           <LoadingBox />
@@ -63,6 +73,9 @@ function HomeScreen() {
           </Row>
         )}
       </div>
+      
+      
+      
     </div>
   );
 }
