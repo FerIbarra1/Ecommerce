@@ -55,8 +55,9 @@ function HomeScreen() {
       <Helmet>
         <title>Cafe Deer</title>
       </Helmet>
-      <h1>Productos</h1>
+      <h1 style={{color:'red' }}>Descuentos</h1>
       <div><Database2 data3={data3} /></div>
+      <h1>Productos</h1>
       <div></div>
       <div className="products">
         {loading ? (
